@@ -4,7 +4,7 @@
 
 This project provides an example of leveraging [RSocket](https://rsocket.io) as a mechanism for transmitting streaming messages between processes in an electron application.
 
-The implementation is based off of the concepts described in the [Reply streams](https://www.electronjs.org/docs/latest/tutorial/message-ports/#reply-streams) documentation.
+The implementation is based off of the concepts described in the [Reply streams](https://www.electronjs.org/docs/latest/tutorial/message-ports/#reply-streams) and the [context isolation](https://www.electronjs.org/docs/latest/tutorial/message-ports/#communicating-directly-between-the-main-process-and-the-main-world-of-a-context-isolated-page) documentation.
 
 #### Notable Files
 
