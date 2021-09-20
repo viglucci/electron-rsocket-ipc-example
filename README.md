@@ -52,7 +52,7 @@ yarn && yarn build
 First, clone the repo via git and install dependencies:
 
 ```bash
-git clone --depth 1 --branch main https://github.com/electron-react-boilerplate your-project-name
+git clone --depth 1 --branch main https://github.com/viglucci/electron-rsocket-ipc-example.git your-project-name
 cd your-project-name
 yarn
 ```
