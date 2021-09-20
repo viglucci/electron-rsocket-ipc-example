@@ -2,7 +2,7 @@
 
 This example project is based off of Electron React Boilerplate.
 
-See [https://github.com/electron-react-boilerplate/](https://github.com/electron-react-boilerplate) for futher documentation.
+See [https://github.com/electron-react-boilerplate/](https://github.com/electron-react-boilerplate) for further documentation.
 
 ## Prereqs
 
