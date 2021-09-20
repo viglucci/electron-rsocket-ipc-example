@@ -15,6 +15,8 @@ TODO: provide more details about implementation.
 #### Notable Files
 
 - [init-rsocket-ipc-server.ts](./src/main/init-rsocket-ipc-server.ts)
+- [index.ejs](./src/renderer/index.ejs)
+- [preload.js](./src/main/preload.js)
 - [RSocketProvider.jsx](./src/renderer/contexts/RSocketProvider.jsx)
 
 ## Usage
