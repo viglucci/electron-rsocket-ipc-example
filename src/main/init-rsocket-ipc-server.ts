@@ -13,7 +13,8 @@ import {
 
 const makeAcceptor = () => {
   return async (setupFrame: any) => {
-    console.log(`RSocket client connected.`, setupFrame);
+    console.log(`[main process] RSocket client connected.`, setupFrame);
+
     return {
       requestResponse(
         payload: Payload,
@@ -45,10 +46,6 @@ export default async function initRSocketServer() {
   // "server", whith the other being sent to the "client" (the browser window). Throw these
   // ports the main process and the browser window process are able to communicate.
   const { port1, port2 } = new MessageChannelMain();
-
-  port1.on('message', (event) => {
-    console.log(event.data);
-  });
 
   const transport = new MessageChannelServerTransport({
     messagePortProvider: async () =>
