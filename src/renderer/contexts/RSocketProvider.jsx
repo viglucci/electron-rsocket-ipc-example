@@ -1,10 +1,7 @@
+import { RSocketConnector } from '@rsocket/rsocket-core';
+import { MessageChannelClientTransport } from '@rsocket/rsocket-message-channel-ipc-client';
 import React, { useEffect, useRef, useState } from 'react';
 import RSocketContext from './RSocketContext';
-
-const { RSocketConnector } = require('@rsocket/rsocket-core');
-const {
-  MessageChannelClientTransport,
-} = require('@rsocket/rsocket-message-channel-ipc-client');
 
 const RSocketProvider = (props) => {
   // eslint-disable-next-line react/prop-types
