@@ -29,8 +29,8 @@ git checkout dev-message-channel-ipc-transport
 ```
 cd rsocket-js
 cd packages/rsocket-core && yarn link && cd ..
-cd packages/rsocket-message-channel-ipc-client && yarn link && cd ..
-cd packages/rsocket-message-channel-ipc-server && yarn link && cd ..
+cd packages/rsocket-message-channel-ipc-client && yarn link && cd .. && cd ..
+cd packages/rsocket-message-channel-ipc-server && yarn link && cd .. && cd ..
 ```
 
 #### Install & Build
