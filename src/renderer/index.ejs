@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Game Platform Example</title>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <script>
+      let mainChannelMessagePortPromiseResolve;
+      const mainChannelMessagePortPromise = new Promise((resolve, reject) => {
+        mainChannelMessagePortPromiseResolve = resolve;
+      });
+      window.getMainChannelMessagePort = () => mainChannelMessagePortPromise;
+      window.onmessage = (event) => {
+        // event.source === window means the message is coming from the preload
+        // script, as opposed to from an <iframe> or other source.
+        if (event.source === window && event.data === 'main-world-port') {
+          const [port] = event.ports;
+          // resolve the above promise with the given port
+          mainChannelMessagePortPromiseResolve(port);
+          // Once we have the port, we can communicate directly with the main
+          // process.
+          port.onmessage = (messageEvent) => {
+            if (messageEvent.data === 'PING') {
+              port.postMessage('PONG');
+            }
+          };
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
