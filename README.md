@@ -12,7 +12,7 @@ This example relies on an experimental version of [rsocket-js](https://github.co
 
 ```
 git clone https://github.com/rsocket/rsocket-js.git
-git checkout dev
+git checkout dev-message-channel-ipc-transport
 ```
 
 ### Link Packages
